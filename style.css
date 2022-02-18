@@ -10,6 +10,18 @@ body {
 
 /*##############*/
 /*#            #*/
+/*#    HOME    #*/
+/*#            #*/
+/*##############*/
+.home.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*##############*/
+/*#            #*/
 /*#    BUSS    #*/
 /*#            #*/
 /*##############*/
@@ -25,7 +37,8 @@ body {
 .card {
   display: flex;
   justify-content: center;
-  width: 30vw;
+  padding: 0vh 3vw 0vh 4vw;
+  width: 40vw;
   height: 13vh;
 }
 
@@ -63,9 +76,8 @@ body {
 
 .fuck.card {
   display: flex;
-  justify-content: center;
-  width: 30vw;
-  height: 13vh;
+  padding: 0vh 3vw 0vh 4vw;
+  width: 40vw;
 }
 
 .cardCovered {

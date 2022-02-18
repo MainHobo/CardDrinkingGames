@@ -1,0 +1,3 @@
+function nextCard(){
+  fuckTheDealerView();
+}

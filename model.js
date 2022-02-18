@@ -1,6 +1,6 @@
 const model = {
 
   app: {
-    page: "",
+    page: "Fuck The Dealer",
   },
 }

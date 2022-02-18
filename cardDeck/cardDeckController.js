@@ -1,31 +1,23 @@
-function printDeck(){
-  for(let i = 0; i < cards.suit.length; i++){
+function printDeck() {
+  for(let i = 0; i < cards.suit.length; i++) {
     let suitPrint = cards.suit[i];
   
-    if(model.app.page == "Bussturen") {
-      for(let i = 0; i < cards.value.length; i++){
-        let cardPrint = cards.value[i];
-        cards.fullDeck.push(cardPrint + ' ' + suitPrint);
-      }
-    }
-    else if (model.app.page == "Fuck The Dealer") {
-      for(let i = 0; i < cards.value.length; i++){
-        let cardPrint = cards.value[i];
-        cards.fullDeck.push(cardPrint);
-      }
+    for(let i = 0; i < cards.value.length; i++) {
+      let cardPrint = cards.value[i];
+      cards.fullDeck.push(cardPrint + ' ' + suitPrint);
     }
   }
 }
 
-function shuffle(){
+function shuffle() {
   cards.fullDeck.sort(function(){return Math.random() - 0.5})
 }
 
-function randomCardSelector(){
-  return Math.floor(Math.random() * 52);
+function randomCardSelector() {
+  return Math.floor(Math.random() * cards.fullDeck.length);
 }
 
-function revealCard(){
+function revealCard() {
   let removeCover = document.getElementById('card');
 
   if(removeCover.classList.contains('cardCovered')) {

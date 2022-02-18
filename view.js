@@ -4,12 +4,15 @@ function view() {
   document.getElementById('title').innerHTML = app.page;
 
   if(app.page == "Bussturen") {
-    bussView()
+    bussView();
   }
   else if(app.page == "Fuck The Dealer") {
-    fuckTheDealerView()
+    fuckTheDealerView();
+  }
+  else if(app.page == "Deck of Cards"){
+    cardDeck();
   }
   else{
-    signIn()
+    signIn();
   }
 }

@@ -1,28 +1,18 @@
-// singleCard()
-// function singleCard(){
-//   if(cards.fullDeck.length == 0){
-//     printDeck();
-//     shuffle();
-//   }
-//   let html = "";
+function cardDeck(){
+  if(cards.fullDeck.length == 0){
+    printDeck();
+  }
+  let html = "";
 
-//   html += `<div class="cardDeck">`;
+  html += `<div class="cardDeck">`;
   
-//   html += /*html*/ `
-//     <div id="card" class="card cardCovered" onclick="revealCard()">
-//       <div >
-//         ${cards.fullDeck[randomCardSelector()]}
-//       </div>
-//     </div>
-//   `;
-
-//   // for(let i = 0; i < cards.fullDeck.length; i++){
-//   //   html += /*html*/ `
-//   //     <div class="cards ${cards.fullDeck[i]}">
-//   //       ${cards.fullDeck[i]}
-//   //     </div>
-//   //   `;
-//   // }
-//   html += `</div>`;
-//   document.getElementById("app").innerHTML = html;
-// }
+  for(let i = 0; i < cards.fullDeck.length; i++){
+    html += /*html*/ `
+      <div class="cards ${cards.fullDeck[i]}">
+        ${cards.fullDeck[i]}
+      </div>
+    `;
+  }
+  html += `</div>`;
+  document.getElementById("app").innerHTML = html;
+}
