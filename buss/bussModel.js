@@ -1,11 +1,6 @@
 //Bussturen
 const buss = {
 
-  app: {
-    page: "Bussturen",
-    userID: "",
-  },
-
   input: {
     username: "",
     image: "",

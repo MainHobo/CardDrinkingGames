@@ -2,9 +2,17 @@ function printDeck(){
   for(let i = 0; i < cards.suit.length; i++){
     let suitPrint = cards.suit[i];
   
-    for(let i = 0; i < cards.value.length; i++){
-      let cardPrint = cards.value[i];
-      cards.fullDeck.push(cardPrint + suitPrint);
+    if(model.app.page == "Bussturen") {
+      for(let i = 0; i < cards.value.length; i++){
+        let cardPrint = cards.value[i];
+        cards.fullDeck.push(cardPrint + ' ' + suitPrint);
+      }
+    }
+    else if (model.app.page == "Fuck The Dealer") {
+      for(let i = 0; i < cards.value.length; i++){
+        let cardPrint = cards.value[i];
+        cards.fullDeck.push(cardPrint);
+      }
     }
   }
 }

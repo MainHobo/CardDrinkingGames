@@ -1,14 +1,14 @@
-function bussView(){
+function fuckTheDealerView(){
   if(cards.fullDeck.length == 0){
     printDeck();
     shuffle();
   }
   let html = "";
 
-  html += /*html*/ `<div class="cardDeck">`;
+  html += /*html*/ `<div class="fuck cardDeck">`;
   
   html += /*html*/ `
-    <div id="card" class="card cardCovered" onclick="revealCard()">
+    <div id="card" class="fuck card cardCovered" onclick="revealCard()">
       <div >
         ${cards.fullDeck[randomCardSelector()]}
       </div>

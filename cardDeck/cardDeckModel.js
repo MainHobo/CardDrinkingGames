@@ -15,10 +15,10 @@ const cards = {
     "K",
   ],
   suit: [
-    "S",
-    "H",
-    "C",
-    "D",
+    "Spade",
+    "Heart",
+    "Club",
+    "Diamond",
   ],
   fullDeck: [],
 }
