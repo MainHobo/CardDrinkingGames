@@ -1,0 +1,39 @@
+html {
+  font-family: 'Minecraft', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.cardDeck {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4vh;
+  font-size: 10vh;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  height: 13vh;
+}
+
+.cardCovered {
+  background-color: black;
+  color: black;
+  border: 1vh solid white;
+  user-select: none;
+  cursor: pointer;
+}
+
+.cardUncovered {
+  background-color: black;
+  color: white;
+  border: 1vh solid white;
+  user-select: none;
+  cursor: pointer;
+}
