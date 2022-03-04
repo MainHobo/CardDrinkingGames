@@ -160,6 +160,7 @@ body {
     position: fixed;
     top: 0;
     text-align: center;
+    width: 40vw;
 }
 
 .bussPlayerCard {
@@ -177,10 +178,6 @@ body {
     display: flex;
     gap: 1vmin;
     flex-direction: column;
-}
-
-.markedCard {
-    background-color: white;
 }
 
 /*##############*/

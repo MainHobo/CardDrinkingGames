@@ -3,6 +3,7 @@ function bussView(confirmValue = false, element = null){
         printDeck();
     }
     let html = "";
+    
 
     // User input how manny cards they want
     if(!confirmValue) {
@@ -33,7 +34,6 @@ function bussView(confirmValue = false, element = null){
     if(confirmValue) {
         html += cardAmountConfirm(element.value)
     }
-
     document.getElementById('app').innerHTML = html;
     if(!confirmValue) {
     document.getElementsByClassName('bussBoardAmount')[0].focus();

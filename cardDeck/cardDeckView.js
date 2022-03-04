@@ -3,8 +3,6 @@ function cardDeck(){
     printDeck();
   }
   let html = "";
-  let card = cards.fullDeck[rng];
-  let isRed = (card.search("&hearts;") != -1 || card.search("&diams;") != -1)
 
   html += `<div class="cardDeck">`;
   

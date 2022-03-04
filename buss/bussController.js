@@ -5,31 +5,35 @@ function cardAmountConfirm(input) {
 
 function showCards() {
     let html = "";
-    
-    html += /*html*/ `<div class="bussCardContainerWrapper">`;
-    html += /*html*/ `<div class="bussCardContainer">`;
-    html += /*html*/ `<div class="cardDeck">`;
 
-    
-    for(let i = 0; i < buss.input.mode; i++) { 
-        let rng = randomCardSelector();
-        let card = cards.fullDeck[rng];
-        let isRed = (card.search("&hearts;") != -1 || card.search("&diams;") != -1)
+    if(cards.fullDeck.length >= 0) {    
+        html += /*html*/ `<div class="bussCardContainerWrapper">`;
+        html += /*html*/ `<div class="bussCardContainer">`;
+        html += /*html*/ `<div class="cardDeck">`;
 
-        html += /*html*/ `
-            <div class="buss card cardCovered c${i+1}" onclick="revealCard(this)">
-                <div class="${(isRed) ? 'redCard' : ''}">
-                    ${cards.fullDeck[rng]}
+        for(let i = 0; i < buss.input.mode; i++) { 
+            let rng = randomCardSelector();
+            let card = cards.fullDeck[rng];
+            let isRed = (card.search("&hearts;") != -1 || card.search("&diams;") != -1)
+
+            html += /*html*/ `
+                <div class="buss card cardCovered c${i+1}" onclick="revealCard(this)">
+                    <div class="${isRed ? 'redCard' : ''}">
+                        ${cards.fullDeck[rng]}
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
 
-        console.log(rng)
-        cards.fullDeck.splice(rng, 1); 
+            console.log(rng)
+            cards.fullDeck.splice(rng, 1); 
+        };
+        html += `</div></div></div>`;
     }
-
-    html += `</div></div></div>`;
-
+    else {
+        html += /*html*/ `
+            <p> Too manny cards </p>
+        `;
+    }
   return html;
 }
 
@@ -58,7 +62,7 @@ function playerCards(index) {
 }
 
 function markCard(element) {
-    element.classList.toggle("markedCard");
+    element.classList.toggle("cardCovered");
     console.log(element);
     
 }
