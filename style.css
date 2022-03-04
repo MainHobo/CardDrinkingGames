@@ -123,10 +123,9 @@ body {
     width: 100vw;
 }
 
-.bussCardContainer {
+/* .bussCardContainer {
     display: flex;
-    position: fixed;
-}
+} */
 
 .bussCardSettings {
     display: flex;
