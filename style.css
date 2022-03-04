@@ -73,8 +73,8 @@ body {
     align-items: center;
     justify-content: center;
     grid-column-end: span 2;
-    width: 14vmin;
-    height: 14vmin;
+    width: 13vmin;
+    height: 13vmin;
     font-size: 8vmin;
 }
 
