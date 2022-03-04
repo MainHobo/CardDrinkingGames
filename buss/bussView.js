@@ -22,7 +22,7 @@ function bussView(confirmValue = false, element = null){
                         ${model.input.usernames[i]}
                     </div>
                     <div class="bussUserCard">
-                        ${playerCards()}
+                        ${playerCards(i)}
                     </div>
                 </div>
             `;

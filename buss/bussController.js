@@ -33,18 +33,16 @@ function showCards() {
   return html;
 }
 
-function playerCards() {
+function playerCards(index) {
     let html = "";
-    
-    html += /*html*/ `<div class="cardDeck">`;
 
     
     for(let i = 0; i < 5; i++) { 
         let rng = randomCardSelector();
 
             html += /*html*/ `
-                <div class="bussPlayerCard" onclick="">
-                    <div>
+                <div class="bussPlayerCard" onclick="markCard(this)">
+                    <div class="deck${index}${i}">
                         ${cards.fullDeck[rng]}
                     </div>
                 </div>
@@ -54,7 +52,11 @@ function playerCards() {
         cards.fullDeck.splice(rng, 1); 
     }
 
-    html += `</div>`;
-
   return html;
+}
+
+function markCard(element) {
+    element.classList.toggle("markedCard");
+    console.log(element);
+    
 }

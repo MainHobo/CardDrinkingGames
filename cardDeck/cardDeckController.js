@@ -18,7 +18,7 @@ function randomCardSelector() {
 }
 
 function revealCard(element) {
-
+    console.log(element)
     element.classList.toggle('cardUncovered');
     element.classList.toggle('cardCovered');
 }

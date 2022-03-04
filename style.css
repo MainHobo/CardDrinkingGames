@@ -8,7 +8,7 @@ html {
 
 body {
     margin: 0;
-    color: aliceblue;
+    color: white;
     background-color: black;
 }
 
@@ -147,18 +147,19 @@ body {
 
 .bussUser {
     display: flex;
+    align-items: center;
     gap: 1vmin;
     flex-direction: column;
 }
 
 .bussUserNames {
     display: flex;
-    flex-direction: column;
     font-size: 4vmin;
     gap: 3vmin;
     padding: 10px;
     position: fixed;
     top: 0;
+    text-align: center;
 }
 
 .bussPlayerCard {
@@ -169,6 +170,17 @@ body {
     height: 6vmin;
     font-size: 3vmin;
     border: 0.5vmin solid white;
+    cursor: pointer;
+}
+
+.bussUserCard {
+    display: flex;
+    gap: 1vmin;
+    flex-direction: column;
+}
+
+.markedCard {
+    background-color: white;
 }
 
 /*##############*/
