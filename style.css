@@ -1,23 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
 html {
-  font-family: 'Minecraft', sans-serif;
+    font-family: 'Minecraft', sans-serif;
 }
 
 body {
-  margin: 0;
-  color: aliceblue;
-  background-color: black;
+    margin: 0;
+    color: aliceblue;
+    background-color: black;
 }
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
 
 /*##############*/
 /*#            #*/
 /*#    HOME    #*/
 /*#            #*/
 /*##############*/
+
+.userNameInputContainer {
+    width: 70vw;
+    left: 15vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.userNameText {
+    text-align: center;
+}
+
+.userNameInput {
+    margin: 0;
+    width: 20rem;
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
 .home.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*##############*/
+/*#            #*/
+/*#    CARD    #*/
+/*#            #*/
+/*##############*/
+
+.redCard {
+    color: rgb(255, 55, 55);
+}
+
+.cardDeck {
+    top: 0px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 4vh;
+}
+  
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-end: span 2;
+    width: 15vmin;
+    min-width: 15vmin;
+    height: 15vmin;
+    font-size: 8vmin;
+}
+
+.card:nth-child(1) {
+    grid-column-start: 5;
+}
+
+.card:nth-child(2) {
+    grid-column-start: 4;
+}
+
+.card:nth-child(4) {
+    grid-column-start: 3;
+}
+
+.card:nth-child(7) {
+    grid-column-start: 2;
+}
+
+.cardCovered,
+.cardUncovered {
+    color: white;
+    background-color: black;
+    border: 1vmin solid white;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cardCovered div {
+    visibility: hidden;
+}
+
+.cardUncovered div {
+    visibility: visible;
 }
 
 /*##############*/
@@ -26,36 +118,58 @@ body {
 /*#            #*/
 /*##############*/
 
-.cardDeck {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 4vh;
-  font-size: 10vh;
+.bussCardContainerWrapper {
+    display: flex;
+    justify-content: right;
 }
 
-.card {
-  display: flex;
-  justify-content: center;
-  padding: 0vh 3vw 0vh 4vw;
-  width: 40vw;
-  height: 13vh;
+.bussCardContainer {
+    width: 80vmin;
+    display: flex;
 }
 
-.cardCovered {
-  background-color: black;
-  color: black;
-  border: 1vh solid white;
-  user-select: none;
-  cursor: pointer;
+.bussCardSettings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.cardUncovered {
-  background-color: black;
-  color: white;
-  border: 1vh solid white;
-  user-select: none;
-  cursor: pointer;
+.bussCardSettingsHidden {
+    visibility: hidden;
+}
+
+.bussBoardAmount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bussUser {
+    display: flex;
+    gap: 1vmin;
+    flex-direction: column;
+}
+
+.bussUserNames {
+    display: flex;
+    flex-direction: column;
+    font-size: 4vmin;
+    gap: 3vmin;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+
+.bussPlayerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vmin;
+    min-width: 8vmin;
+    height: 8vmin;
+    font-size: 4vmin;
+    border: 0.5vmin solid white;
 }
 
 /*##############*/
@@ -64,34 +178,8 @@ body {
 /*#            #*/
 /*##############*/
 
-.fuck.cardDeck {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 4vh;
-  font-size: 10vh;
-  height: 100vh;
-}
-
-.fuck.card {
-  display: flex;
-  padding: 0vh 3vw 0vh 4vw;
-  width: 40vw;
-}
-
-.cardCovered {
-  background-color: black;
-  color: black;
-  border: 1vh solid white;
-  user-select: none;
-  cursor: pointer;
-}
-
-.cardUncovered {
-  background-color: black;
-  color: white;
-  border: 1vh solid white;
-  user-select: none;
-  cursor: pointer;
+.fuckTheDealerButton,
+.bussturenButton {
+    padding: 5vmin;
+    font-size: 5vmin;
 }

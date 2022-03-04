@@ -1,6 +1,6 @@
 const cards = {
   value: [
-    "1",
+    "A",
     "2",
     "3",
     "4",
@@ -15,10 +15,10 @@ const cards = {
     "K",
   ],
   suit: [
-    "Spade",
-    "Heart",
-    "Club",
-    "Diamond",
+    "&spades;",
+    "&hearts;",
+    "&clubs;",
+    "&diams;",
   ],
   fullDeck: [],
 }

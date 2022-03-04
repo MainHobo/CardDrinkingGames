@@ -1,6 +1,9 @@
 const model = {
 
   app: {
-    page: "",
+    page: "", //Fuck The Dealer, Bussturen
+  },
+  input:{
+      usernames: [],
   },
 }

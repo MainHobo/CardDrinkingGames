@@ -4,7 +4,7 @@ function printDeck() {
   
     for(let i = 0; i < cards.value.length; i++) {
       let cardPrint = cards.value[i];
-      cards.fullDeck.push(cardPrint + ' ' + suitPrint);
+      cards.fullDeck.push(cardPrint + suitPrint);
     }
   }
 }
@@ -17,15 +17,8 @@ function randomCardSelector() {
   return Math.floor(Math.random() * cards.fullDeck.length);
 }
 
-function revealCard() {
-  let removeCover = document.getElementById('card');
+function revealCard(element) {
 
-  if(removeCover.classList.contains('cardCovered')) {
-    removeCover.classList.add('cardUncovered');
-    removeCover.classList.remove('cardCovered');
-  }
-  else {
-    removeCover.classList.remove('cardUncovered');
-    removeCover.classList.add('cardCovered');
-  }
+    element.classList.toggle('cardUncovered');
+    element.classList.toggle('cardCovered');
 }

@@ -1,29 +1,28 @@
 function fuckTheDealerView(){
-  if(cards.fullDeck.length === 0){
-    printDeck();
-    shuffle();
-  }
-  let rng = randomCardSelector();
-  let html = "";
+    if(cards.fullDeck.length === 0){
+        printDeck();
+    }
 
-  html += /*html*/ `<div class="fuck cardDeck">`;
-  html += `<button onclick="nextCard()">Next Card</button>`;
-  html += /*html*/ `
-    <div id="card" class="fuck card cardCovered" onclick="revealCard()">
-      <div>`  
-  console.log(cards.fullDeck[rng]);
-  html += cards.fullDeck[rng];
-  cards.fullDeck.splice(rng, 1);
-  html += `</div></div>`;
+    let rng = randomCardSelector();
+    let html = "";
 
-  // for(let i = 0; i < cards.fullDeck.length; i++){
-  //   html += /*html*/ `
-  //     <div class="cards ${cards.fullDeck[i]}">
-  //       ${cards.fullDeck[i]}
-  //     </div>
-  //   `;
-  // }
-  html += `</div>`;
-  
-  document.getElementById('app').innerHTML = html;
+        html += `
+            <input 
+        `;
+
+        html += /*html*/ `<button onclick="nextCard()">Next Card</button>`;
+
+        html += /*html*/ `<div class="cardDeck">`;
+        html += /*html*/ `
+            <div class="fuck card cardCovered" onclick="revealCard(this)">
+            <div>
+                ${cards.fullDeck[rng]}
+            </div>
+            </div>
+        `;
+        cards.fullDeck.splice(rng, 1);
+
+        html += `</div>`;
+
+    document.getElementById('app').innerHTML = html;
 }

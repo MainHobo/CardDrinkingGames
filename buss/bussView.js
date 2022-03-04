@@ -1,27 +1,41 @@
-function bussView(){
-  if(cards.fullDeck.length == 0){
-    printDeck();
-    shuffle();
-  }
-  let html = "";
+function bussView(confirmValue = false, element = null){
+    if(cards.fullDeck.length == 0){
+        printDeck();
+    }
+    let html = "";
 
-  html += /*html*/ `<div class="cardDeck">`;
-  
-  html += /*html*/ `
-    <div id="card" class="card cardCovered" onclick="revealCard()">
-      <div >
-        ${cards.fullDeck[randomCardSelector()]}
-      </div>
-    </div>
-  `;
+    // User input how manny cards they want
+    if(!confirmValue) {
+        html += /*html*/ `
+            <div id="2" class="bussCardSettings">
+                <input class="bussBoardAmount" type="number" placeholder="Your amount of cards" onchange="bussView(true, this)">
+            </div>
+        `;
+    }
+    if(confirmValue) {
+        html += /*html*/ `<div class="bussUserNames">`;
+        for(let i = 0; i < model.input.usernames.length; i++) {
+            shuffle();
+            html += /*html*/ `
+                <div class="bussUser">
+                    <div class="bussName">
+                        ${model.input.usernames[i]}
+                    </div>
+                    <div class="bussUserCard">
+                        ${playerCards()}
+                    </div>
+                </div>
+            `;
+        }
+        html += /*html*/ `</div>`;
+    }
 
-  // for(let i = 0; i < cards.fullDeck.length; i++){
-  //   html += /*html*/ `
-  //     <div class="cards ${cards.fullDeck[i]}">
-  //       ${cards.fullDeck[i]}
-  //     </div>
-  //   `;
-  // }
-  html += `</div>`;
-  document.getElementById('app').innerHTML = html;
+    if(confirmValue) {
+        html += cardAmountConfirm(element.value)
+    }
+
+    document.getElementById('app').innerHTML = html;
+    if(!confirmValue) {
+    document.getElementsByClassName('bussBoardAmount')[0].focus();
+    }
 }
