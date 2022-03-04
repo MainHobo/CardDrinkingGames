@@ -18,7 +18,7 @@ function showCards() {
 
         html += /*html*/ `
             <div class="buss card cardCovered c${i+1}" onclick="revealCard(this)">
-                <div class="a ${(isRed) ? 'redCard' : ''}">
+                <div class="${(isRed) ? 'redCard' : ''}">
                     ${cards.fullDeck[rng]}
                 </div>
             </div>
@@ -39,10 +39,12 @@ function playerCards(index) {
     
     for(let i = 0; i < 5; i++) { 
         let rng = randomCardSelector();
+        let card = cards.fullDeck[rng];
+        let isRed = (card.search("&hearts;") != -1 || card.search("&diams;") != -1)
 
             html += /*html*/ `
                 <div class="bussPlayerCard" onclick="markCard(this)">
-                    <div class="deck${index}${i}">
+                    <div class="deck${index}${i} ${(isRed) ? 'redCard' : ''}">
                         ${cards.fullDeck[rng]}
                     </div>
                 </div>
