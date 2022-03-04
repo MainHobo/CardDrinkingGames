@@ -73,9 +73,8 @@ body {
     align-items: center;
     justify-content: center;
     grid-column-end: span 2;
-    width: 15vmin;
-    min-width: 15vmin;
-    height: 15vmin;
+    width: 14vmin;
+    height: 14vmin;
     font-size: 8vmin;
 }
 
@@ -121,11 +120,12 @@ body {
 .bussCardContainerWrapper {
     display: flex;
     justify-content: right;
+    width: 100vw;
 }
 
 .bussCardContainer {
-    width: 80vmin;
     display: flex;
+    position: fixed;
 }
 
 .bussCardSettings {
@@ -165,10 +165,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8vmin;
-    min-width: 8vmin;
-    height: 8vmin;
-    font-size: 4vmin;
+    width: 6vmin;
+    height: 6vmin;
+    font-size: 3vmin;
     border: 0.5vmin solid white;
 }
 
