@@ -1,4 +1,4 @@
-function bussView(confirmValue = false, element = null){
+function bussView(confirmValue = false){
     if(cards.fullDeck.length == 0){
         printDeck();
     }
@@ -9,7 +9,19 @@ function bussView(confirmValue = false, element = null){
     if(!confirmValue) {
         html += /*html*/ `
             <div id="2" class="bussCardSettings">
-                <input class="bussBoardAmount" type="number" placeholder="Your amount of cards" onchange="bussView(true, this)">
+                <div class="bussMode">
+                    <h1 class="bussModeText">Game Mode</h1>
+                    <select class="bussBoardAmount" type="number">
+                        <option value="3">Pussy</option>
+                        <option value="6">Easy</option>
+                        <option value="10">Sure</option>
+                        <option value="15">Normal</option>
+                        <option value="21">Hard</option>
+                        <option value="28">Sheeeesh</option>
+                    </select>
+                </div>
+                    <button class="bussBoardAmount" onclick="bussView(true)">Start</button>
+                </div>
             </div>
         `;
     }
@@ -32,7 +44,7 @@ function bussView(confirmValue = false, element = null){
     }
 
     if(confirmValue) {
-        html += cardAmountConfirm(element.value)
+        html += cardAmountConfirm()
     }
     document.getElementById('app').innerHTML = html;
     if(!confirmValue) {

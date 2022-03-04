@@ -22,6 +22,12 @@ body {
 /*#            #*/
 /*##############*/
 
+.fuckTheDealerButton,
+.bussturenButton {
+    padding: 3vmin;
+    font-size: 5vmin;
+}
+
 .userNameInputContainer {
     width: 70vw;
     left: 15vw;
@@ -30,6 +36,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 5vmin;
+    gap: 5vmin;
 }
 
 .userNameText {
@@ -64,8 +72,8 @@ body {
 .cardDeck {
     top: 0px;
     display: grid;
-    grid-template-columns: repeat(10,1fr);
-    gap: 4vh;
+    grid-template-columns: repeat(15,1fr);
+    gap: 2vmin;
 }
   
 .card {
@@ -73,26 +81,39 @@ body {
     align-items: center;
     justify-content: center;
     grid-column-end: span 2;
-    width: 13vmin;
-    height: 13vmin;
-    font-size: 8vmin;
+    width: 10vmin;
+    height: 10vmin;
+    font-size: 5vmin;
 }
 
 .card:nth-child(1) {
-    grid-column-start: 5;
+    grid-column-start: 7;
 }
 
 .card:nth-child(2) {
-    grid-column-start: 4;
+    grid-column-start: 6;
 }
 
 .card:nth-child(4) {
-    grid-column-start: 3;
+    grid-column-start: 5;
 }
 
 .card:nth-child(7) {
+    grid-column-start: 4;
+}
+
+.card:nth-child(11) {
+    grid-column-start: 3;
+}
+
+.card:nth-child(16) {
     grid-column-start: 2;
 }
+
+.card:nth-child(22) {
+    grid-column-start: 1;
+}
+
 
 .cardCovered,
 .cardUncovered {
@@ -120,7 +141,9 @@ body {
 .bussCardContainerWrapper {
     display: flex;
     justify-content: right;
+    align-items: center;
     width: 100vw;
+    height: 100vh;
 }
 
 .bussCardContainer {
@@ -133,16 +156,35 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 3vmin;
+    border-style: none;
+    align-items: center;
 }
 
-.bussCardSettingsHidden {
-    visibility: hidden;
+.bussMode {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bussModeText {
+    font-size: 5vmin;
+
 }
 
 .bussBoardAmount {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 3vmin;
+    font-size: 5vmin;
+    appearance: none;
+    text-align: center;
+}
+
+.bussCardSettings > button {
+    height: 17.2vmin;
+    border-style: none;
 }
 
 .bussUser {
@@ -155,7 +197,7 @@ body {
 .bussUserNames {
     display: flex;
     font-size: 4vmin;
-    gap: 3vmin;
+    gap: 5vmin;
     padding: 10px;
     position: fixed;
     top: 0;
@@ -186,8 +228,3 @@ body {
 /*#            #*/
 /*##############*/
 
-.fuckTheDealerButton,
-.bussturenButton {
-    padding: 5vmin;
-    font-size: 5vmin;
-}

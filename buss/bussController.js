@@ -1,5 +1,7 @@
-function cardAmountConfirm(input) {
-    buss.input.mode = input;
+function cardAmountConfirm() {
+    let input = document.getElementsByClassName("bussBoardAmount")
+    buss.input.mode = input[0].value
+    // buss.input.mode = input;
     return showCards(input)
 }
 
