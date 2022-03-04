@@ -9,7 +9,7 @@ function signIn(confirmValue = false, element = null) {
         </div>
     </div>
     <div class="home buttons">
-      <!--<button class="fuckTheDealerButton" onclick="go('Fuck The Dealer')">Fuck the dealer</button>-->
+      <button class="fuckTheDealerButton" onclick="go('Fuck The Dealer')">Fuck the dealer</button>
       <button class="bussturenButton" onclick="go('Bussturen')">Bussturen</button>
     </div>
   `;
