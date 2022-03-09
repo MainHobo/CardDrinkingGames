@@ -2,8 +2,8 @@ function printDeck() {
   for(let i = 0; i < cards.suit.length; i++) {
     let suitPrint = cards.suit[i];
   
-    for(let i = 0; i < cards.value.length; i++) {
-      let cardPrint = cards.value[i];
+    for(let j = 0; j < cards.value.length; j++) {
+      let cardPrint = cards.value[j];
       cards.fullDeck.push(cardPrint + suitPrint);
     }
   }
